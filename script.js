@@ -1,6 +1,6 @@
 // Phase 2 JavaScript: DOM, events, validation, jQuery gallery and REST APIs
 
-const OPENWEATHER_API_KEY = "PASTE_YOUR_OPENWEATHERMAP_API_KEY_HERE";
+const OPENWEATHER_API_KEY = "ae7d35ce103b424564c51fc5f3ea3e67";
 
 // ---------- Dynamic greeting + DOM access ----------
 const greetingElement = document.getElementById("greeting");
