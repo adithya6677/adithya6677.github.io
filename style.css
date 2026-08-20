@@ -252,8 +252,11 @@ figcaption {
   margin-top: 25px;
 }
 
-.embed-card audio {
+.embed-card iframe {
   width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
   margin: 15px 0;
 }
 
@@ -355,5 +358,197 @@ footer a {
 
   footer {
     flex-direction: column;
+  }
+}
+
+/* ---------- Phase 2 additions ---------- */
+.greeting {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 24px;
+  border: 8px solid white;
+  box-shadow: 0 18px 50px rgba(23, 32, 51, 0.15);
+}
+
+.status-text {
+  margin-top: 12px;
+  color: #536174;
+  font-size: 0.9rem;
+}
+
+.interactive-gallery {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gallery-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.gallery-thumb-button {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 6px;
+  background: white;
+  cursor: pointer;
+  color: #172033;
+}
+
+.gallery-thumb-button img {
+  width: 100%;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.gallery-thumb-button span {
+  display: block;
+  padding-top: 5px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.gallery-thumb-button.active {
+  border-color: #2563eb;
+}
+
+.gallery-thumb {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-thumb:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.12);
+}
+
+.articles-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.article-card {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+}
+
+.article-card h3 {
+  font-size: 1rem;
+}
+
+.article-card p {
+  color: #536174;
+  font-size: 0.9rem;
+}
+
+.article-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.status-box,
+.form-message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #eef4ff;
+  margin-bottom: 18px;
+}
+
+.weather-layout {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 25px;
+}
+
+.weather-search {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.weather-result {
+  min-height: 250px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.weather-result #weatherTemp {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.weather-result img {
+  width: 90px;
+  margin: 0 auto;
+}
+
+.error-text {
+  min-height: 18px;
+  color: #dc2626;
+}
+
+code {
+  background: #e7edf5;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1100px) {
+  .articles-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .interactive-gallery,
+  .weather-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .articles-list,
+  .gallery-thumbnails {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-main img {
+    height: 260px;
   }
 }
